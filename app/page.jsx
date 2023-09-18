@@ -1,19 +1,17 @@
-import Feed from "@components/Feed";
+import Content from "@components/Content";
+import Sidebar from "@components/Sidebar";
+import Nav from "@components/Nav";
 
 const Home = () => (
-  <section className='w-full flex-center flex-col'>
-    <h1 className='head_text text-center'>
-      Discover & Share
-      <br className='max-md:hidden' />
-      <span className='orange_gradient text-center'> AI-Powered Prompts</span>
-    </h1>
-    <p className='desc text-center'>
-      Promptopia is an open-source AI prompting tool for modern world to
-      discover, create and share creative prompts
-    </p>
-
-    <Feed />
-  </section>
+  <div className="flex">
+      <div className="w-[290px] bg-[color:#15132b]">
+       <Sidebar />
+      </div>
+      <div className="w-screen">
+        <Nav />
+        <Content />
+      </div>
+  </div>
 );
 
 export default Home;

@@ -1,139 +1,40 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import { IoMdNotifications } from "react-icons/Io";
+import { BsPersonWorkspace, BsFillClipboardCheckFill, BsFolderFill, BsCaretDownFill } from "react-icons/Bs";
+import ReactCountryFlag from "react-country-flag";
 
 const Nav = () => {
-  const { data: session } = useSession();
-
-  const [providers, setProviders] = useState(null);
-  const [toggleDropdown, setToggleDropdown] = useState(false);
-
-  useEffect(() => {
-    (async () => {
-      const res = await getProviders();
-      setProviders(res);
-    })();
-  }, []);
-
   return (
-    <nav className='flex-between w-full mb-16 pt-3'>
-      <Link href='/' className='flex gap-2 flex-center'>
-        <Image
-          src='/assets/images/logo.svg'
-          alt='logo'
-          width={30}
-          height={30}
-          className='object-contain'
-        />
-        <p className='logo_text'>Promptopia</p>
-      </Link>
+    <div className="nav-bar">
+      
+      <div><input type="search" placeholder="Search here" className="search-btn" /></div>
 
-      {/* Desktop Navigation */}
-      <div className='sm:flex hidden'>
-        {session?.user ? (
-          <div className='flex gap-3 md:gap-5'>
-            <Link href='/create-prompt' className='black_btn'>
-              Create Post
-            </Link>
-
-            <button type='button' onClick={signOut} className='outline_btn'>
-              Sign Out
-            </button>
-
-            <Link href='/profile'>
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className='rounded-full'
-                alt='profile'
-              />
-            </Link>
-          </div>
-        ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <button
-                  type='button'
-                  key={provider.name}
-                  onClick={() => {
-                    signIn(provider.id);
-                  }}
-                  className='black_btn'
-                >
-                  Sign in
-                </button>
-              ))}
-          </>
-        )}
+      <div><u className="text-xs font-bold text-[color:#5718C3]">OTHER MENUS</u></div>
+      
+      <div className="flex gap-6 text-[30px]">
+      <div className="relative text-[color:#777DF2]"><IoMdNotifications /> <span className="absolute text-[10px] font-bold py-1 px-[6px] text-white bg-[color:#5DCFFF] rounded-[50%] bottom-[15px] left-[10px]">12</span> </div>
+      <div className="relative text-[color:#464669]"><BsPersonWorkspace /> <span className="absolute text-[10px] font-bold py-1 px-[10px] text-white bg-[color:#5DCFFF] rounded-[50%] bottom-[15px] left-[17px]">5</span> </div>
+      <div className="relative text-[color:#777DF2]"><BsFillClipboardCheckFill /> <span className="absolute text-[10px] font-bold py-1 px-[10px] text-white bg-[color:#5DCFFF] rounded-[50%] bottom-[15px] left-[17px]">2</span> </div>
+      <div className="relative text-[color:#777DF2]"><BsFolderFill /> <span className="absolute text-[10px] font-bold py-1 px-[10px] text-white bg-[color:#E328AF] rounded-[50%] bottom-[15px] left-[15px]">!</span> </div>
+      </div>
+      
+      <div className="flex justify-center items-center gap-2 text-center bg-[color:#211a75] px-7 py-3 rounded-3xl">
+        <ReactCountryFlag countryCode="IN" svg title="IN" className="flag text-xl" />
+        INDIA<BsCaretDownFill className="text-[color:#6217BE]" />
       </div>
 
-      {/* Mobile Navigation */}
-      <div className='sm:hidden flex relative'>
-        {session?.user ? (
-          <div className='flex'>
-            <Image
-              src={session?.user.image}
-              width={37}
-              height={37}
-              className='rounded-full'
-              alt='profile'
-              onClick={() => setToggleDropdown(!toggleDropdown)}
-            />
+      
 
-            {toggleDropdown && (
-              <div className='dropdown'>
-                <Link
-                  href='/profile'
-                  className='dropdown_link'
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  My Profile
-                </Link>
-                <Link
-                  href='/create-prompt'
-                  className='dropdown_link'
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  Create Prompt
-                </Link>
-                <button
-                  type='button'
-                  onClick={() => {
-                    setToggleDropdown(false);
-                    signOut();
-                  }}
-                  className='mt-5 w-full black_btn'
-                >
-                  Sign Out
-                </button>
-              </div>
-            )}
-          </div>
-        ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <button
-                  type='button'
-                  key={provider.name}
-                  onClick={() => {
-                    signIn(provider.id);
-                  }}
-                  className='black_btn'
-                >
-                  Sign in
-                </button>
-              ))}
-          </>
-        )}
+      <div className="flex justify-center items-center gap-2">
+        <div className="border mr-5 h-10 border-[color:#464669]"></div>
+        <div className="w-[40px] h-[40px] rounded-lg bg-[color:#C4C4C4]"></div>
+        <div className="flex flex-col text-xs font-bold">
+          <span>Instructor Day</span>
+          <span className="text-[color:#5B79EB] text-xs font-semibold">Super Admin</span>
+        </div><BsCaretDownFill className="text-[color:#6418C3]" />
       </div>
-    </nav>
-  );
-};
 
-export default Nav;
+    </div>
+  )
+}
+
+export default Nav
