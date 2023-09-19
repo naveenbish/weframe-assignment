@@ -3,6 +3,7 @@ import Cards from "./Cards";
 import CardsThree from "./Cards3";
 import CardsTwo from "./Cards2";
 import Imagetest from "./Imageop";
+import {AiFillAccountBook} from 'react-icons/ai';
 
 const Content = () => {
   return (
@@ -18,7 +19,7 @@ const Content = () => {
           {/* Left Portion  */}
           <div>
             <div className="flex text-xl font-bold">
-              <Imagetest className="mr-2 text-3xl text-[color:#A5A5A5]" />
+              <AiFillAccountBook className="mr-2 text-3xl text-[color:#A5A5A5]" />
               <div>School November Tasks</div>
             </div>
             <div className="text-xs font-normal ml-9 mt-3">Created by Instructor Day on November 31, 2022</div>
