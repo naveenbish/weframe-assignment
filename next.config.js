@@ -17,13 +17,4 @@ const nextConfig = {
   }
 }
 
-module.exports = {
-  async rewrites() {
-      return [
-        {
-          source: '*',
-          destination: 'https://weframe-assignment.errorop.com/*',
-        },
-      ]
-    },
-};
+module.exports = nextConfig
