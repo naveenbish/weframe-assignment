@@ -11,6 +11,9 @@
 
 /* Tailwind Styles */
 
+body{
+  @apply bg-[color:#0D0B21];
+}
 
 .side_bar {
   @apply flex flex-col gap-8 fixed items-stretch bg-[color:var(--main-color)] p-5 h-screen text-white shadow-xl shadow-black z-10;
@@ -21,7 +24,7 @@
 }
 
 .content-wrapper{
-  @apply bg-[color:var(--content-color)] overflow-x-scroll text-white;
+  @apply bg-[color:var(--content-color)] text-white;
 }
 
 .flag{
@@ -86,3 +89,22 @@ input.search-btn {
   box-shadow: 2px 3px 20px #6418C3;
 }
 
+/* For Stylish Scroll-Bar  */
+
+::-webkit-scrollbar{
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: ##0D0B21;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #6418C3;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #211A75;
+}
