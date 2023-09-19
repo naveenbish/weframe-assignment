@@ -1,12 +1,13 @@
-import { RxDotFilled } from "react-icons/Rx";
-import { BsFillArrowLeftCircleFill, BsThreeDotsVertical, BsPersonFillAdd, BsThreeDots } from "react-icons/Bs";
-import { BiSolidCommentDots } from "react-icons/Bi";
-import { SiAddthis } from "react-icons/Si";
-import { RiAddBoxFill } from 'react-icons/Ri';
 import Image from "next/image";
 import Cards from "./Cards";
 import CardsThree from "./Cards3";
 import CardsTwo from "./Cards2";
+import Imagetest from "./Imageop";
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import MessageIcon from '@mui/icons-material/Message';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 
 const Content = () => {
   return (
@@ -22,7 +23,7 @@ const Content = () => {
           {/* Left Portion  */}
           <div>
             <div className="flex text-xl font-bold">
-              <BsFillArrowLeftCircleFill className="mr-2 text-3xl text-[color:#A5A5A5]" />
+              <ArrowCircleLeftIcon className="mr-2 text-3xl text-[color:#A5A5A5]" />
               <div>School November Tasks</div>
             </div>
             <div className="text-xs font-normal ml-9 mt-3">Created by Instructor Day on November 31, 2022</div>
@@ -43,7 +44,7 @@ const Content = () => {
               />
             </div>
             <div>
-              <BsThreeDotsVertical />
+              <MoreVertIcon />
             </div>
           </div>
         </div>
@@ -61,13 +62,13 @@ const Content = () => {
               <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-[color:#e328af] border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">5+</a>
             </div>
             <div className="flex gap-1 rounded-lg bg-[color:#6418C3] p-2">
-              <BsPersonFillAdd className="text-xl" />
+              <PersonAddAlt1Icon className="text-xl" />
               <div className="font-semibold">Invite People</div>
             </div>
             <div className="text-base border border-[color:#6418C3] p-2 px-4 rounded-lg">Private</div>
             <div className="text-base bg-[color:#7879F1] rounded-lg p-2 px-4">Edit</div>
             <div className="flex items-center gap-1 text-base border border-[color:#6418C3] p-2 px-4 rounded-lg">
-              <BiSolidCommentDots />
+              <MessageIcon />
               <div>45 Comments</div>
             </div>
           </div>
@@ -95,7 +96,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>To-DO List(24)</div>
-            <div className="text-3xl text-[color:#6418C3] bg-[color:white] rounded-lg add-shadow"><SiAddthis /></div>
+            <div className="text-[color:#6418C3]"><AddBoxIcon /></div>
           </div>
           <Cards />
           <CardsThree />
@@ -107,7 +108,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>In Progress(2)</div>
-            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><SiAddthis /></div>
+            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><AddBoxIcon /></div>
           </div>
           <CardsThree />
           <Cards />
@@ -118,7 +119,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>Done(3)</div>
-            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><SiAddthis /></div>
+            <div className="text-[color:#211A75]"><AddBoxIcon /></div>
           </div>
           <Cards />
           <Cards />
@@ -130,7 +131,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>Revised(0)</div>
-            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><SiAddthis /></div>
+            <div className="text-[color:#211A75]"><AddBoxIcon /></div>
           </div>
           <div className="bg-[color:#211A75] p-3 rounded-lg my-5">
             <div className="flex justify-center items-center">
@@ -145,7 +146,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>Contant(2)</div>
-            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><SiAddthis /></div>
+            <div className="text-[color:#211A75]"><AddBoxIcon /></div>
           </div>
           <Cards />
           <Cards />
@@ -157,7 +158,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>Contant(2)</div>
-            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><SiAddthis /></div>
+            <div className="text-[color:#211A75]"><AddBoxIcon /></div>
           </div>
           <Cards />
           <Cards />
