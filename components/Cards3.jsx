@@ -1,7 +1,3 @@
-import { BsThreeDots } from "react-icons/Bs";
-import { SiAddthis } from "react-icons/Si";
-import { RxDotFilled } from "react-icons/Rx";
-import { IoMdTimer } from "react-icons/Io";
 import Imagetest from "./Imageop";
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FiberManualRecordRoundedIcon from '@mui/icons-material/FiberManualRecordRounded';
