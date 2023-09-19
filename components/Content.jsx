@@ -108,7 +108,7 @@ const Content = () => {
           {/* Heading  */}
           <div className="flex justify-between">
             <div>In Progress(2)</div>
-            <div className="text-3xl text-[color:#211A75] bg-[color:#6418C3] rounded-lg"><AddBoxIcon /></div>
+            <div className="text-[color:#211A75]"><AddBoxIcon /></div>
           </div>
           <CardsThree />
           <Cards />
